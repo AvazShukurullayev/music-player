@@ -38,7 +38,8 @@ const App = () => {
             <Song currentSong={currentSong}/>
             <Player currentSong={currentSong} isPlaying={isPlaying} setIsPlaying={setIsPlaying} audioRef={audioRef}
                     timeUpdateHandler={timeUpdateHandler} songInfo={songInfo} setSongInfo={setSongInfo}/>
-            <Library songs={songs} setCurrentSong={setCurrentSong} audioRef={audioRef} isPlaying={isPlaying}/>
+            <Library songs={songs} setCurrentSong={setCurrentSong} audioRef={audioRef} isPlaying={isPlaying}
+                     setSongs={setSongs}/>
         </div>
     )
 }

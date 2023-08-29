@@ -5,7 +5,7 @@
   cursor: pointer;
   transition: all 0.3s ease-in;
   &:hover {
-    background: #6bef90;
+    background: #0ce040;
   }
 
   img {
@@ -25,4 +25,8 @@
     text-align: center;
     margin: 0.25rem 0;
   }
+}
+
+.selected {
+  background: #3ef66a;
 }
