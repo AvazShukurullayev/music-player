@@ -1,11 +1,9 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAngleLeft, faAngleRight, faPause, faPlay} from "@fortawesome/free-solid-svg-icons";
 import "../styles/_player.scss"
-import { useRef, useState} from "react";
+import {useState} from "react";
 
-const Player = ({currentSong, isPlaying, setIsPlaying}) => {
-    // Ref
-    const audioRef = useRef(null)
+const Player = ({currentSong, isPlaying, setIsPlaying, audioRef, timeUpdateHandler, songInfo, setSongInfo}) => {
     // Event handlers function bosilganda muzika qoyilsin
     const playSongHandler = () => {
         if (isPlaying) {
@@ -17,23 +15,6 @@ const Player = ({currentSong, isPlaying, setIsPlaying}) => {
         }
     }
 
-    // State ashula haqida ma'lumot
-    const [songInfo, setSongInfo] = useState({
-        currentTime: 0,
-        duration: 0
-    })
-
-    // Function
-    const timeUpdateHandler = (e) => {
-        const currentTime = e.target.currentTime;
-        const duration = e.target.duration;
-
-        setSongInfo({
-            ...songInfo,
-            currentTime: currentTime,
-            duration: duration
-        })
-    }
 
     const getTime = (time) => {
         return (Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2))
