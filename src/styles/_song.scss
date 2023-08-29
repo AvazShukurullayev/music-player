@@ -1,0 +1,22 @@
+.song-container {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .song-img {
+    width: 20%;
+    border-radius: 50%;
+    margin: 1rem 0;
+    box-shadow: 0 0 3px #fff, 0 0 5px 1px #000, 0 0 30px 3px dodgerblue;
+  }
+
+  .song-title {
+    margin: 2rem 0 0.75rem;
+    //font-size: 44px;
+  }
+  .song-subtitle {
+    font-size: 1rem;
+  }
+}
